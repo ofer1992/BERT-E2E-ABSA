@@ -8,7 +8,8 @@ import numpy as np
 from glue_utils import convert_examples_to_seq_features, output_modes, processors, compute_metrics_absa
 from tqdm import tqdm, trange
 from transformers import BertConfig, BertTokenizer, XLNetConfig, XLNetTokenizer, WEIGHTS_NAME
-from transformers import AdamW, get_linear_schedule_with_warmup
+from transformers import get_linear_schedule_with_warmup
+from torch.optim import AdamW
 from absa_layer import BertABSATagger, XLNetABSATagger
 
 from torch.utils.data import DataLoader, TensorDataset, RandomSampler, SequentialSampler
