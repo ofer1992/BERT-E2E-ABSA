@@ -5,6 +5,28 @@ Exploiting **BERT** **E**nd-**t**o-**E**nd **A**spect-**B**ased **S**entiment **
 </p>
 
 ## Requirements
+
+### Easy Setup with uv (Recommended)
+This project now uses [uv](https://docs.astral.sh/uv/) for fast and reliable dependency management:
+
+1. Install uv (if not already installed):
+   ```bash
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
+
+2. Clone and setup:
+   ```bash
+   git clone https://github.com/lixin4ever/BERT-E2E-ABSA.git
+   cd BERT-E2E-ABSA
+   uv sync
+   ```
+
+3. Run commands with uv:
+   ```bash
+   uv run python fast_run.py
+   ```
+
+### Manual Setup (Original)
 * python 3.7.3
 * pytorch 1.2.0 (also tested on pytorch 1.3.0)
 * ~~transformers 2.0.0~~ transformers 4.1.1
@@ -12,6 +34,8 @@ Exploiting **BERT** **E**nd-**t**o-**E**nd **A**spect-**B**ased **S**entiment **
 * tensorboardX 1.9
 * tqdm 4.32.1
 * some codes are borrowed from **allennlp** ([https://github.com/allenai/allennlp](https://github.com/allenai/allennlp), an awesome open-source NLP toolkit) and **transformers** ([https://github.com/huggingface/transformers](https://github.com/huggingface/transformers), formerly known as **pytorch-pretrained-bert** or **pytorch-transformers**)
+
+**Note**: The uv setup uses modern versions of dependencies (Python 3.8+, PyTorch 2.x, etc.) for easier installation and better compatibility with current systems.
 
 ## Architecture
 * Pre-trained embedding layer: BERT-Base-Uncased (12-layer, 768-hidden, 12-heads, 110M parameters)
